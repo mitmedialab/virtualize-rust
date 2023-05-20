@@ -18,7 +18,7 @@ fi
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > $VIRTUALIZE_RUST_DIR/bootstrap_rustup.sh
 (
     cd $VIRTUALIZE_RUST_DIR
-    RUSTUP_HOME=$VIRTUALIZE_RUST_DIR/rustup CARGO_HOME=$VIRTUALIZE_RUST_DIR/cargo sh ./bootstrap_rustup.sh
+    RUSTUP_HOME=$VIRTUALIZE_RUST_DIR/rustup CARGO_HOME=$VIRTUALIZE_RUST_DIR/cargo sh ./bootstrap_rustup.sh -y --no-modify-path
     $VIRTUALIZE_RUST_DIR/cargo/bin/rustup default $VIRTUALIZE_RUST_VERSION
 )    
 
